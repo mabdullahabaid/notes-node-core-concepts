@@ -17,7 +17,7 @@ console.log(memoryContainer);
 When we execute the code above, we get the following logged to the console. Note that the values are displayed in hexadecimal, therefore each element holds exactly eight bits like we discussed earlier.
 
 <p align="center">
-    <img src="../images/image-04.png" width="800" />
+    <img src="../images/S03-SS04.png" width="800" />
 </p>
 
 We can replace the console statement to display the first element within the buffer.
@@ -33,7 +33,7 @@ console.log(memoryContainer[0]);
 The code above logs the following to the console.
 
 <p align="center">
-    <img src="../images/image-05.png" width="800" />
+    <img src="../images/S03-SS05.png" width="800" />
 </p>
 
 Now that we have our memory container, we can go ahead and write data on it.
@@ -52,7 +52,7 @@ console.log(memoryContainer[0]);
 The code above logs the following to the console. Note the difference between the two outputs - one represents the first element in hexadecimal, whereas the other represents the first element in decimal number system.
 
 <p align="center">
-    <img src="../images/image-06.png" width="800" />
+    <img src="../images/S03-SS06.png" width="800" />
 </p>
 
 Provided each element within the buffer can hold one byte, the minimum and the maximum values we can store within an element are 0 and 255, respectively. We can also store negative values to the buffer, but the conversion of negative numbers to binary is not in the curriculum of this course; to understand these things better, study computer organization and computer architecture.
@@ -73,7 +73,7 @@ console.log(memoryContainer[1]);
 The code above logs the following to the console.
 
 <p align="center">
-    <img src="../images/image-07.png" width="800" />
+    <img src="../images/S03-SS07.png" width="800" />
 </p>
 
 Using the bracket notation does the trick of storing the correct negative number within the buffer, but it does not convert back the stored number to a developer friendly output. To manually convert it back, we need to take the stored value (1101 1110), convert the 0s into 1s and vice versa (0010 0001), convert the number to decimal, and finally add one to the result.
@@ -104,7 +104,7 @@ console.log(memoryContainer.readInt8(1));
 The code above logs the following to the console.
 
 <p align="center">
-    <img src="../images/image-08.png" width="800" />
+    <img src="../images/S03-SS08.png" width="800" />
 </p>
 
 There is a whole list of methods to deal with numbers of different sizes. For example, the `writeBigInt64BE` and the `writeBigInt64LE` methods help us work with integers of 64 bits in size. These integers are stored in contiguous elements, but when we access them using the `readBigInt64BE` or the `readBigInt64LE` methods, we get a developer friendly response for the number.
@@ -142,7 +142,7 @@ console.log(memoryContainer.toString("hex"));
 The code above logs the following to the console.
 
 <p align="center">
-    <img src="../images/image-09.png" width="800" />
+    <img src="../images/S03-SS09.png" width="800" />
 </p>
 
 Note that we can also loop over the buffer object and access/modify the elements of the buffer from within the loop. This is extremely useful when we need to work with buffers in the real world because they can be something like 16,000 bytes in size for a machine with 16 gigabytes of free memory.
@@ -165,7 +165,7 @@ console.log(buff.toString("utf-8"));
 The code above logs the following to the console.
 
 <p align="center">
-    <img src="../images/image-10.png" width="800" />
+    <img src="../images/S03-SS10.png" width="800" />
 </p>
 
 This example shows how we can work with some raw binary data and load it up within our memory to perform some operations on it. We can also store this data into a file, send it over a network, or pass it onto another process once it is loaded up in the memory. This also helps us understand that we use a character encoding to make sense of the stored binary data - we converted the binary data to `hex` and `utf-8` when converting it to a string, and the latter encoding gives us English characters.

@@ -17,7 +17,7 @@ setInterval(() => {
 Now, if open up our activity monitor and check the memory consumption for the "node" process, we should see the following. Note that most monitors represent the memory consumption in MiB instead of MB. Therefore, the number on the monitor is slightly smaller than the allocated memory at a glance, but behind the scenes, it is the same number.
 
 <p align="center">
-    <img src="../images/image-11.png" width="800" />
+    <img src="../images/S03-SS11.png" width="800" />
 </p>
 
 By default, we can allocate a maximum of 4 gigabytes of memory to the buffer. We can use the following code to confirm this size. Note that we can also increase the MAX_LENGTH if we must by overriding the default value.

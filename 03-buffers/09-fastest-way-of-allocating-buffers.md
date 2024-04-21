@@ -55,7 +55,7 @@ We discussed one reason due to which the `allocUnsafe` method is faster, which i
 When we run a "node" process, it reserves a small piece for memory for itself. The purpose of this space is to use it for future buffers. Therefore, when we create a new unsafe buffer, Node JS tries to use the reserved space, and only reserves a new piece of memory if the buffer size is greater than the reserved space. On the contrary, safe buffers always reserve a new piece of memory, which is obviously slower than utilizing an already reserved piece.
 
 <p align="center">
-    <img src="../images/image-12.png" width="800" />
+    <img src="../images/S03-SS12.png" width="800" />
 </p>
 
 We can confirm the size of this reserved piece of memory by executing the following code, which prints out 8 KiB.
