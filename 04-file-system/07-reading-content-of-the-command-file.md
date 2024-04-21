@@ -47,7 +47,7 @@ const fs = require("fs/promises");
 Now, we need to use the `fs.read` method to read the contents of the file we opened. The Node JS documentation lists three overloads of the `fs.read` method. Each of these methods have the same return type, but differ in the way they accept arguments.
 
 <p align="center">
-    <img src="../images/image-18.png" width="800" />
+    <img src="../images/S04-SS06.png" width="800" />
 </p>
 
 The following code reads the content from the file and logs it to the console.
@@ -79,7 +79,7 @@ Hello
 When we save the `command.txt` file, the following object gets logged to the console.
 
 <p align="center">
-    <img src="../images/image-19.png" width="1200" />
+    <img src="../images/S04-SS07.png" width="1200" />
 </p>
 
 There are two properties within the object: bytesRead and buffer. The bytesRead property really indicates the number of characters that were read from inside the file. The buffer property builds onto the knowledge of buffers fr om the last section; each element within the buffer represents one unicode character in the hexadecimal form.
@@ -108,13 +108,13 @@ const fs = require("fs/promises");
 If we start our application and then save the `command.txt` file again, we get the following logged to the console.
 
 <p align="center">
-    <img src="../images/image-20.png" width="800" />
+    <img src="../images/S04-SS08.png" width="800" />
 </p>
 
 Note that there is also a possibility where the following gets logged to the console instead.
 
 <p align="center">
-    <img src="../images/image-21.png" width="800" />
+    <img src="../images/S04-SS09.png" width="800" />
 </p>
 
 The reason for such behavior has to do with the position argument of the `fs.read` method. It indicates the location to begin reading data from the file. So, if the value of the argument is something other than zero, the whole file is not read on every read. Instead, Node JS starts off from the location that was not read in the previous read. Therefore, when the location argument is not specified, it appears that Node JS has this anomaly of skipping some bytes and reading data from a different location everytime. Nevertheless, to enforce the behavior of reading from the start of the file, we can make the following changes to the code.

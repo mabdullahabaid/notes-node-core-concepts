@@ -65,13 +65,13 @@ const fs = require("fs/promises");
 If we save the `command.txt` file with the text specified earlier, we should see the following logged to the console.
 
 <p align="center">
-    <img src="../images/image-23.png" width="800" />
+    <img src="../images/S04-SS11.png" width="800" />
 </p>
 
 We may across instances where we see the following logged to the console upon saving the `command.txt` file. This goes back to our dicussion about the inconsistent behavior of the `fs.watch` method across platforms.
 
 <p align="center">
-    <img src="../images/image-24.png" width="800" />
+    <img src="../images/S04-SS12.png" width="800" />
 </p>
 
 Note that the logic we implemented earlier also allows us to create a file with an absolute path. Therefore, if we update the text inside `command.txt` to the following and save it, we should have a new file on our desktop.

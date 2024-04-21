@@ -40,5 +40,5 @@ To test out what happens upon encountering an error, change the name of the sour
 The Node JS official documentation lists examples for each of the three types of APIs, so the documentation for the file system module is extremely long and comprehensive.
 
 <p align="center">
-    <img src="../images/image-15.png" width="800" />
+    <img src="../images/S04-SS03.png" width="800" />
 </p>

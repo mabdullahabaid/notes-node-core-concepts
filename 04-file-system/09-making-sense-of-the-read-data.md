@@ -35,7 +35,7 @@ const fs = require("fs/promises");
 The code above logs the following to the console when we save changes to the `command.txt` file.
 
 <p align="center">
-    <img src="../images/image-22.png" width="800" />
+    <img src="../images/S04-SS10.png" width="800" />
 </p>
 
 Just to expand on the concept of encoders and decoders, Node JS natively only understands a character encoder and a character decoder; it does not understand image/video encoders or decoders. Therefore, if we want to make sense of a file that is an image by defintion, we cannot do it natively with Node JS. Instead, we need to install third-party packages to decode the file - we can also write the decoder ourself. Upon decoding successfully, we can combine two images, resize an image, crop an image, and do everything else that we want, ofc.

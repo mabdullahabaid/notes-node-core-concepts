@@ -22,13 +22,13 @@ const fs = require("fs/promises");
 Now, if we execute the `app.js` file and then make some changes to the `command.txt` file, we get an object containing event details logged to the console. Remember that we need to save the file to write changes from our memory to the hard-drive, and the file itself only gets changed when we write changes to the hard-drive.
 
 <p align="center">
-    <img src="../images/image-16.png" width="800" />
+    <img src="../images/S04-SS04.png" width="800" />
 </p>
 
 Since we decided to watch the complete directory for changes, creating a new file within the directory logs the following to the console.
 
 <p align="center">
-    <img src="../images/image-17.png" width="800" />
+    <img src="../images/S04-SS05.png" width="800" />
 </p>
 
 Note that the eventType property says "rename" instead of "create". Therefore, if we want to distinguish between an actual "rename" and a "create" operation, we'd need to use some other methods exposed by the file system module.
